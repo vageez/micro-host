@@ -12,7 +12,7 @@ module.exports = (_, argv) => ({
     publicPath:
       argv.mode === "development"
         ? "http://localhost:8080/"
-        : "https://awehost.bellmedia.ca/", // Production
+        : "https://micro-host-self.vercel.app/", // Production
   },
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
@@ -67,13 +67,20 @@ module.exports = (_, argv) => ({
     new ModuleFederationPlugin({
       name: "host",
       filename: "remoteEntry.js",
+      // remotes: {
+      //   live: "live@http://localhost:8083/remoteEntry.js",
+      //   search: "search@http://localhost:8085/remoteEntry.js",
+      //   show: "show@http://localhost:8086/remoteEntry.js",
+      //   video: "video@http://localhost:8087/remoteEntry.js",
+      //   landing: "landing@http://localhost:8091/remoteEntry.js",
+      // },
       remotes: {
-        grid: "rotator@http://localhost:8092/remoteEntry.js",
-        live: "live@http://localhost:8083/remoteEntry.js",
-        search: "search@http://localhost:8085/remoteEntry.js",
-        show: "show@http://localhost:8086/remoteEntry.js",
-        video: "video@http://localhost:8087/remoteEntry.js",
-        landing: "landing@http://localhost:8091/remoteEntry.js",
+        live: "live@https://micro-live.vercel.app/live/remoteEntry.js",
+        search: "search@https://micro-search.vercel.app/search/remoteEntry.js",
+        show: "show@https://micro-show.vercel.app/show/remoteEntry.js",
+        video: "video@https://micro-video.vercel.app/video/remoteEntry.js",
+        landing:
+          "landing@https://micro-landing-one.vercel.app/landing/remoteEntry.js",
       },
       exposes: {
         "./Shell": "./src/Shell",
@@ -103,3 +110,30 @@ module.exports = (_, argv) => ({
     }),
   ],
 });
+
+/**
+
+HOST
+https://micro-host-self.vercel.app/host/main.js
+
+ROTATOR
+https://micro-rotator.vercel.app/rotator/main.js
+
+GRID
+https://micro-grid.vercel.app/grid/main.js
+
+LANDING
+https://micro-landing-one.vercel.app/landing/main.js
+
+LIVE
+https://micro-live.vercel.app/live/main.js
+
+SHOW
+https://micro-show.vercel.app/show/main.js
+
+SEARCH
+https://micro-search.vercel.app/search/main.js
+
+VIDEO
+https://micro-video.vercel.app/video/main.js
+ */
