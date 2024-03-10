@@ -75,12 +75,11 @@ module.exports = (_, argv) => ({
       //   landing: "landing@http://localhost:8091/remoteEntry.js",
       // },
       remotes: {
-        live: "live@https://micro-live.vercel.app/live/remoteEntry.js",
-        search: "search@https://micro-search.vercel.app/search/remoteEntry.js",
-        show: "show@https://micro-show.vercel.app/show/remoteEntry.js",
-        video: "video@https://micro-video.vercel.app/video/remoteEntry.js",
-        landing:
-          "landing@https://micro-landing-one.vercel.app/landing/remoteEntry.js",
+        live: "live@https://micro-live.vercel.app/remoteEntry.js",
+        search: "search@https://micro-search.vercel.app/remoteEntry.js",
+        show: "show@https://micro-show.vercel.app/remoteEntry.js",
+        video: "video@https://micro-video.vercel.app/remoteEntry.js",
+        landing: "landing@https://micro-landing-one.vercel.app/remoteEntry.js",
       },
       exposes: {
         "./Shell": "./src/Shell",
