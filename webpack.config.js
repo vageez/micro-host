@@ -67,13 +67,6 @@ module.exports = (_, argv) => ({
     new ModuleFederationPlugin({
       name: "host",
       filename: "remoteEntry.js",
-      // remotes: {
-      //   live: "live@http://localhost:8083/remoteEntry.js",
-      //   search: "search@http://localhost:8085/remoteEntry.js",
-      //   show: "show@http://localhost:8086/remoteEntry.js",
-      //   video: "video@http://localhost:8087/remoteEntry.js",
-      //   landing: "landing@http://localhost:8091/remoteEntry.js",
-      // },
       remotes: {
         live: "live@https://micro-live.vercel.app/remoteEntry.js",
         search: "search@https://micro-search.vercel.app/remoteEntry.js",
@@ -113,26 +106,36 @@ module.exports = (_, argv) => ({
 /**
 
 HOST
-https://micro-host-self.vercel.app/host/main.js
+https://micro-host-self.vercel.app/host/remoteEntry.js
 
 ROTATOR
-https://micro-rotator.vercel.app/rotator/main.js
+https://micro-rotator.vercel.app/rotator/remoteEntry.js
 
 GRID
-https://micro-grid.vercel.app/grid/main.js
+https://micro-grid.vercel.app/grid/remoteEntry.js
 
 LANDING
-https://micro-landing-one.vercel.app/landing/main.js
+https://micro-landing-one.vercel.app/landing/remoteEntry.js
 
 LIVE
-https://micro-live.vercel.app/live/main.js
+https://micro-live.vercel.app/live/remoteEntry.js
 
 SHOW
-https://micro-show.vercel.app/show/main.js
+https://micro-show.vercel.app/show/remoteEntry.js
 
 SEARCH
-https://micro-search.vercel.app/search/main.js
+https://micro-search.vercel.app/search/remoteEntry.js
 
 VIDEO
-https://micro-video.vercel.app/video/main.js
+https://micro-video.vercel.app/video/remoteEntry.js
+
+
+remotes: {
+   live: "live@http://localhost:8083/remoteEntry.js",
+   search: "search@http://localhost:8085/remoteEntry.js",
+   show: "show@http://localhost:8086/remoteEntry.js",
+   video: "video@http://localhost:8087/remoteEntry.js",
+   landing: "landing@http://localhost:8091/remoteEntry.js",
+}
+
  */
