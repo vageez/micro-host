@@ -96,6 +96,10 @@ module.exports = (_, argv) => ({
           requiredVersion: deps["@mui/material"],
           singleton: true,
         },
+        "@emotion/styled": {
+          requiredVersion: deps["@emotion/styled"],
+          singleton: true,
+        },
         "./src/StateService": {
           singleton: true,
         },

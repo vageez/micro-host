@@ -19,7 +19,6 @@ import "./index.css";
 import { Show } from "show/Show";
 import { Search } from "search/Search";
 import { Video } from "video/Video";
-import { useTheme } from "@emotion/react";
 const Live = React.lazy(() => import("live/Live"));
 const Landing = React.lazy(() => import("landing/Landing"));
 const Nav = () => (
