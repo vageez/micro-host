@@ -5,6 +5,12 @@ import { red, blue } from "@mui/material/colors";
 import Button from "@mui/material/Button";
 
 const theme = createTheme({
+  typography: {
+    button: {
+      textTransform: "none",
+      fontFamily: "Arial",
+    },
+  },
   palette: {
     primary: {
       main: red[500],
