@@ -92,6 +92,10 @@ module.exports = (_, argv) => ({
           requiredVersion: deps["react-router-dom"],
           singleton: true,
         },
+        "@mui/material": {
+          requiredVersion: deps["@mui/material"],
+          singleton: true,
+        },
         "./src/StateService": {
           singleton: true,
         },

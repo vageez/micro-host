@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { BrowserRouter, NavLink, Routes, Route } from "react-router-dom";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { ThemeProvider, createTheme, useTheme } from "@mui/material/styles";
 import { red, blue } from "@mui/material/colors";
 import Button from "@mui/material/Button";
 
